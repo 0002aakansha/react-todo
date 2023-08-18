@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import Modal from './Modal'
+import remove from '../assets/delete.png'
+import update from '../assets/update.png'
 
 const Render = (props) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -29,10 +31,14 @@ const Render = (props) => {
                                 <button className='update-btn' onClick={() => {
                                     setIsOpen(!isOpen)
                                     setToDo({ id: toDo.id, title: toDo.title })
-                                }}>update</button>
+                                }}>
+                                    <img src={update} alt="update todo" className='remove' />
+                                </button>
                             }</td>
                             <td>{
-                                <button className='remove-btn' onClick={() => props.delete({ type: 'DELETE', payload: toDo.id })}>remove</button>
+                                <button className='remove-btn' onClick={() => props.delete({ type: 'DELETE', payload: toDo.id })}>
+                                    <img src={remove} alt="delete todo" className='remove' />
+                                </button>
                             }</td>
                         </tr>
                     ))}

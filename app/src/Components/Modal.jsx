@@ -22,7 +22,6 @@ const Modal = (props) => {
             </form>
         </div>
     )
-
 }
 
 export default Modal
