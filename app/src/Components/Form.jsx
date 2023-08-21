@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react"
 import Render from "./Render"
 import { toast } from 'react-toastify'
-import { initState, reducer } from "../Reducer/todo-state"
+import { initState, reducer } from "../Reducer/todoReducer"
 
 const Form = () => {
     const [toDo, setToDo] = useState('')
